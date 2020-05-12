@@ -14,5 +14,5 @@ curl localhost:9559/process/ngi                                                 
 ['nginx', 'nginx', 'nginx', 'nginx', 'nginx', 'nginx']
 ```
 NOTES: 
-- ports are checked by fullmatch via `grep -w`
+- ports are checked for complete match via `grep -w`
 - process are matched using "startswith" function
