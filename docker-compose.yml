@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+
+  nginx:
+    build: .
+    restart: always
+    volumes:
+      - ./conf:/usr/local/openresty/nginx/conf:ro
+      - ./scripts:/scripts:ro
+      - /proc:/host/proc:ro
+    ports:
+      - 9559:9559
