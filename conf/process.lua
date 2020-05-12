@@ -15,10 +15,11 @@ function os.capture(cmd, raw)
 end
 
 -- perform the query
-local script = '/scripts/process.sh ' .. process
-local check = os.capture( script )
+local script = '/scripts/process.py ' .. process
+local exitCode = os.execute( script )
+local body = os.capture( script )
 
 -- return the appropriate status code
-ngx.status = check ==true and 200 or 500
-ngx.say(check)
+ngx.status = exitCode ==true and 200 or 500
+ngx.say(body)
 ngx.exit(ngx.OK)
