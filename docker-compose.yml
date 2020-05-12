@@ -10,4 +10,4 @@ services:
       - ./scripts:/scripts:ro
       - /proc:/host/proc:ro
     ports:
-      - 9559:9559
+      - 127.0.0.1:9559:9559
