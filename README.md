@@ -8,7 +8,7 @@ curl 127.0.0.1:9559/port/9559
 true
 ```
 
-Check if a process matching the pattern are running:
+Check if a process(-es) matching the pattern are running:
 ```bash
 curl localhost:9559/process/ngi                                                                                                                         1:03
 ['nginx', 'nginx', 'nginx', 'nginx', 'nginx', 'nginx']
