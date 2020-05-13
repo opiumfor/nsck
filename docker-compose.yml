@@ -9,5 +9,4 @@ services:
       - ./conf:/usr/local/openresty/nginx/conf:ro
       - ./scripts:/scripts:ro
       - /proc:/host/proc:ro
-    ports:
-      - 127.0.0.1:9559:9559
+    network_mode: host
